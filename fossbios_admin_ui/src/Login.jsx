@@ -1,5 +1,5 @@
-// src/components/Login.jsx
-import React, { useState } from 'react';
+import styles from './Login.module.css';
+import  { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -27,30 +27,30 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className={styles.login_container}>
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email</label>
+      <form onSubmit={handleSubmit} className={styles.loginform}>
+        <div className={styles.loginform_input_div}>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            placeholder='Email'
           />
         </div>
-        <div>
-          <label>Password</label>
+        <div className={styles.loginform_input_div}>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            placeholder='Password'
           />
         </div>
         <button type="submit">Login</button>
       </form>
-      <div>
+      <div className={styles.loginform_input_div}>
         Don't have an account? <Link to="/">Sign Up</Link>
       </div>
     </div>

@@ -1,0 +1,24 @@
+.login_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px
+}
+.loginform{
+    padding: 1rem;
+    padding-right: 2rem;
+}
+.loginform_input_div{
+    width: 100%;
+    margin: 1rem auto;
+}
+.loginform_input_div input{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}

@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import styles from './Signup.module.css'
 
 function AdminSignup() {
   const nameRef = useRef();
@@ -31,24 +32,21 @@ function AdminSignup() {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: 'auto' }}>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.signup_container}>
+      <form onSubmit={handleSubmit} className={styles.signupform}>
         <h2>Admin Sign Up</h2>
         {error && <div style={{ color: 'red' }}>{error}</div>}
-        <div>
-          <label>Name</label>
-          <input type="text" ref={nameRef} required />
+        <div className={styles.signupform_input_div}>
+          <input type="text" ref={nameRef} required placeholder='Name'/>
         </div>
-        <div>
-          <label>Email</label>
-          <input type="email" ref={emailRef} required />
+        <div className={styles.signupform_input_div}>
+          <input type="email" ref={emailRef} required placeholder='Email'/>
         </div>
-        <div>
-          <label>Password</label>
-          <input type="password" ref={passwordRef} required />
+        <div className={styles.signupform_input_div}>
+          <input type="password" ref={passwordRef} required placeholder='Password'/>
         </div>
         <button type="submit">Sign Up</button>
-        <div>
+        <div className={styles.signupform_input_div}>
           Already have an account? <Link to="/admin-login">Login</Link>
         </div>
       </form>

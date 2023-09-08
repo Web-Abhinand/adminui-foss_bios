@@ -1,0 +1,23 @@
+.signup_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+    padding-right: 15px;
+}
+.signupform{
+    padding: 1rem;
+}
+.signupform_input_div{
+    width: 100%;
+    margin: 1rem auto;
+}
+.signupform_input_div input{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
