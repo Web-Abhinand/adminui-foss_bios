@@ -1,5 +1,5 @@
 // src/components/AdminDashboard.jsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const AdminDashboard = () => {
@@ -60,14 +60,12 @@ const AdminDashboard = () => {
       },
     })
       .then((response) => {
-        // Update the leads list after approval
-        fetchLeads();
+        console.log(response);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
 
   const handleApproveAdmin = (adminId) => {
     // Send a request to the server to approve the admin
@@ -77,8 +75,7 @@ const AdminDashboard = () => {
       },
     })
       .then((response) => {
-        // Update the admins list after approval
-        fetchAdmins();
+        console.log(response);
       })
       .catch((err) => {
         console.log(err);
