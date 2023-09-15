@@ -1,5 +1,5 @@
 // src/components/AdminSignup.jsx
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './Signup.module.css'
