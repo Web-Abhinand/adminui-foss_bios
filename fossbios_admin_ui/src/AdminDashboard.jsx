@@ -13,7 +13,7 @@ const AdminDashboard = () => {
   console.log(decodedToken);
   const adminIdemail = decodedToken.email;
   console.log(adminIdemail);
-
+  console.log(adminToken);
   useEffect(() => {
     fetchLeads();
   }, []);
@@ -23,6 +23,7 @@ const AdminDashboard = () => {
   }, []);
 
   useEffect(() => {
+
     axios.get('http://127.0.0.1:8000/admin/allusers', {
       headers: {
         Authorization: `Bearer ${adminToken}`,
@@ -101,8 +102,20 @@ const AdminDashboard = () => {
 
   const filteredAdmins = admins.filter((admin) => admin.email !== 'superadmin@gmail.com');
 
-  const handleApproveLeave = (leaveId) => {
-    // Send a request to the server to approve the leave
+  const handleApproveLeave = (user_id, index) => {
+    axios.put(`http://127.0.0.1:8000/admin/approve-leave/${user_id}/${index}`, null, {
+      headers: {
+        Authorization: `Bearer ${adminToken}`,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+      }
+      )
+      .catch((err) => {
+        console.log(err);
+      }
+      );
   }
 
 
@@ -180,13 +193,15 @@ const AdminDashboard = () => {
               <td>
                 {user.leaveRequests && user.leaveRequests.length > 0 && (
                   user.leaveRequests.map((leaveRequest, index) => (
-                    !leaveRequest.leaveApproved && (
-                      <div key={index}>
-                        <button onClick={() => handleApproveLeave(user._id, leaveRequest._id)}>
+                    <div key={index}>
+                      {leaveRequest.leaveApproved ? (
+                        <span>Approved</span>
+                      ) : (
+                        <button onClick={() => handleApproveLeave(user._id, index)}>
                           Approve Leave
                         </button>
-                      </div>
-                    )
+                      )}
+                    </div>
                   ))
                 )}
               </td>
