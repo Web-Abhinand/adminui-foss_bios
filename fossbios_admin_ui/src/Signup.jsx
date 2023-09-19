@@ -32,7 +32,7 @@ function AdminSignup() {
   };
 
   return (
-    <div className={styles.signup_container}>
+    <div className={styles.signup_container} style={{width:'15%',margin:'0 auto',position:'absolute',top:"30%",left:'40%'}}>
       <form onSubmit={handleSubmit} className={styles.signupform}>
         <h2>Admin Sign Up</h2>
         {error && <div style={{ color: 'red' }}>{error}</div>}

@@ -1,0 +1,41 @@
+/* Header.module.css */
+
+/* Define styles for the header container */
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #333; 
+    color: white; 
+    position: sticky; 
+    top: 0;
+    z-index: 1; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Define styles for the logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Define styles for the logout button container */
+  .logoutButtonContainer {
+    margin-left: auto; /* Push the logout button to the right */
+  }
+  
+  /* Define styles for the logout button */
+  .logoutButton {
+    background-color: #ff5722; /* Example background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logoutButton:hover {
+    background-color: #ff3d00; /* Example hover background color */
+  }
+  

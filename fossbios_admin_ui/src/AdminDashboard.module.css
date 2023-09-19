@@ -1,0 +1,107 @@
+/* AdminDashboard.module.css */
+
+/* Define styles for the main container */
+.container {
+    padding: 20px;
+  }
+  
+  /* Define styles for the page heading */
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Define styles for the logout button */
+  .logoutButton {
+    background-color: #ff5722; /* Example background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .logoutButton:hover {
+    background-color: #ff3d00; /* Example hover background color */
+  }
+  
+  /* Define styles for the lists */
+  .listContainer {
+    margin-bottom: 30px;
+  }
+  
+  /* Define styles for list headings */
+  .listHeading {
+    font-size: 20px;
+  }
+  
+  /* Define styles for list items */
+  .listItem {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Define styles for the "Approved" label */
+  .approvedLabel {
+    color: green; /* Example color for approved users */
+  }
+  
+  /* Define styles for the "Approve" button */
+  .approveButton {
+    background-color: #007bff; /* Example background color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .approveButton:hover {
+    background-color: #0056b3; /* Example hover background color */
+  }
+  
+ /* Define styles for the table */
+.tableContainer {
+    overflow-x: auto; /* Enable horizontal scrolling for the table */
+    max-width: 100%; /* Set a maximum width for the table container */
+    margin: 0 auto;
+  }
+  table{
+    margin: 0 auto;
+  }
+  
+  /* Define styles for the table headers */
+  .tableHeader {
+    background-color: #333; 
+    color: white;
+    padding: 10px; 
+    font-weight: bold; 
+    text-align: left; 
+    white-space: nowrap; 
+  }
+  
+  /* Define styles for the table rows */
+  .tableRow {
+    background-color: #1e1b1b; /* Example background color */
+    padding: 20px; /* Add padding to the table rows */
+    text-align: left; /* Align text to the left within rows */
+    white-space: nowrap; /* Prevent text wrapping in rows */
+  }
+  
+  /* Define alternate row styling for better readability */
+  .tableRow:nth-child(even) {
+    background-color: #2d2a2a; /* Alternate background color */
+  }
+  
+  /* Define styles for the "Not Approved" label */
+  .notApprovedLabel {
+    color: red; /* Example color for not approved leave requests */
+  }
+  .approvedText{
+    color: green;
+    margin-right: 50px;
+  }
